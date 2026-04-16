@@ -2,6 +2,13 @@
 
 This project turns an ESP32 and an MPU6050 accelerometer/gyroscope into a wireless air mouse. It uses a low-latency UDP connection over Wi-Fi to send motion and gesture data to a host machine (PC/Mac/Linux), where a Python script translates the data into actual cursor movements and clicks.
 
+![Wireless Mouse Setup in Action](hardware_setup.png)
+
+### System in Action
+The setup image above demonstrates the complete end-to-end integration of the wireless mouse system in real time:
+- **The Host PC (Monitor):** The Python script (`mouse_controller.py`) is open in the code editor, and the terminal pane reads `Listening for ESP32 mouse data on port 4210...`. This confirms that the UDP socket is successfully bound and actively monitoring the local network for traffic. 
+- **The Hardware (Foreground):** The physical controller circuitry, which consists of the ESP32 microcontroller and MPU6050 sensor. It's powered on (indicated by the red LED) and actively reading physical motion data.
+- **The Action:** As the ESP32 is physically moved across the table, it instantly broadcasts the measured gyroscope and accelerometer data over WiFi. The Python script intercepts these high-frequency network packets, parsing them and translating the raw hardware readings directly into smooth, real-time cursor shifts using the `pynput` framework.
 ## Features
 - **Low Latency**: Uses UDP over Wi-Fi for fast, fire-and-forget data streaming.
 - **Motion Tracking**: Maps real-time gyroscope data to smooth cursor movements at a 100Hz polling rate.

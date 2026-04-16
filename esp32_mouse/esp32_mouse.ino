@@ -4,10 +4,10 @@
 #include <MPU6050.h>
 
 // --- CONFIGURATION ---
-const char* ssid = "XYZ";
-const char* password = "88888888";
-const char* pc_ip = "  10.244.11.127";
-const int udp_port = 4210;
+const char* ssid = "";
+const char* password = "";
+const char* pc_ip = " ";
+const int udp_port = ;
 
 WiFiUDP udp;
 MPU6050 mpu;

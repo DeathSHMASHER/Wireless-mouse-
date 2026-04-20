@@ -1,6 +1,6 @@
 import socket
 from pynput.mouse import Controller, Button
-
+ 
 # --- CONFIGURATION ---
 UDP_IP = "0.0.0.0" # Listens on all available network interfaces
 UDP_PORT = 4210

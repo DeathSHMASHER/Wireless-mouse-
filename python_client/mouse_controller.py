@@ -4,7 +4,7 @@ from pynput.mouse import Controller, Button
 # --- CONFIGURATION ---
 UDP_IP = "0.0.0.0" # Listens on all available network interfaces
 UDP_PORT = 4210
- 
+
 # Set up UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((UDP_IP, UDP_PORT))

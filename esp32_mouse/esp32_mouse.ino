@@ -2,7 +2,7 @@
 #include <WiFiUdp.h>
 #include <Wire.h>
 #include <MPU6050.h>
-
+ 
 // --- CONFIGURATION ---
 const char* ssid = "";
 const char* password = "";

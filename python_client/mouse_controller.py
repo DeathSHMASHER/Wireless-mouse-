@@ -1,7 +1,7 @@
 import socket
 import base64
 from pynput.mouse import Controller, Button
- 
+  
 # --- AUTHOR & METADATA ---
 __author__ = "Shahriyar Taufik"
 __github__ = "https://github.com/DeathSHMASHER"
